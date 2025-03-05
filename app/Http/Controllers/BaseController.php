@@ -7,6 +7,16 @@ use Illuminate\Http\Response;
 
 class BaseController extends Controller
 {
+    public function SuccessResponse($responseData = [], string $message = 'success', $statusCode = 200)
+    {
+        return [
+            "success" => true,
+            "message" => $message,
+            "code" => $statusCode,
+            "data" => $responseData
+        ];
+    }
+
     public function ErrorResponse(Exception | string $error, $errorData = [], $statusCode = 400)
     {
         // check if this http request
