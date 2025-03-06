@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class Authentication extends BaseController
+class AuthController extends BaseController
 {
     function __construct(protected User $user) {}
 
